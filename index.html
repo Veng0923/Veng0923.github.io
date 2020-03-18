@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="个人博客">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Veng">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Veng的博客"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="个人博客" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="Veng的博客"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="website" />
+    
+
+    <!--Page Cover-->
+    
+
+    
+        <meta name="twitter:card" content="summary" />
+    
+    
+    
+
+    <!-- Title -->
+    
+    <title>Veng的博客</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    <!-- Google Analytics -->
+    
+
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+
+<body>
+
+<div class="bg-gradient"></div>
+<div class="bg-pattern"></div>
+
+<!-- Menu -->
+<!--Menu Links and Overlay-->
+<div class="menu-bg">
+    <div class="menu-container">
+        <ul>
+            
+            <li class="menu-item">
+                <a href="/">
+                    Home
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives">
+                    Archives
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/tags">
+                    Tags
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/categories">
+                    Categories
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/contact.html">
+                    Contact
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+<!--Hamburger Icon-->
+<nav>
+    <a href="#menu"></a>
+</nav>
+
+<div class="container">
+
+    <!-- Main Content -->
+    <div class="row">
+    <div class="col-sm-12">
+
+        <!--Title and Logo-->
+        <header>
+    <div class="logo">
+        <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
+        
+            <h1 id="main-title" class="title">Veng的博客</h1>
+        
+    </div>
+</header>
+
+        <section class="main">
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2020/03/18/react-demo/">
+                react-demo
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2020-03-18</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <h2 id="React-快速上手"><a href="#React-快速上手" class="headerlink" title="React 快速上手"></a>React 快速上手</h2><h3 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h3><ol>
+<li>开始一个<code>React</code>的项目.</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npx create-react-app my-app</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>注意：<code>Node &gt;= 8.10</code> 和 <code>npm &gt;= 5.6</code>,<code>npx</code>是 <a href="https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b" target="_blank" rel="noopener">npm 5.2+ 附带的 package 运行工具</a>。</p>
+</blockquote>
+<p>参数说明： </p>
+<p><code>my-app</code>: 指的是项目路径，比如想在当前目录创建项目，则<code>npx create-react-app .</code> </p>
+<p>过程可能会久一点,安装完之后,你会发现<code>git</code>已经是创建好的.<code>npm start</code>测试安装是否成功:</p>
+<p><img src="/2020/03/18/react-demo/assets/1584372361579.png" alt="1584372361579"></p>
+<p>如果有以上信息,则成功,默认端口号是<code>3000</code>,按照提示我们访问,<a href="http://localhost:3000" target="_blank" rel="noopener">http://localhost:3000</a>,一般会自动访问.</p>
+<ol start="2">
+<li>从 <code>hello world</code>开始.</li>
+</ol>
+<p>程序主入口是<code>src/index.js</code>.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">import React from &#39;react&#39;;</span><br><span class="line">import ReactDOM from &#39;react-dom&#39;;</span><br><span class="line">import &#39;.&#x2F;index.css&#39;;</span><br><span class="line">import App from &#39;.&#x2F;App&#39;;</span><br><span class="line">import * as serviceWorker from &#39;.&#x2F;serviceWorker&#39;;</span><br><span class="line"></span><br><span class="line">ReactDOM.render(&lt;App &#x2F;&gt;, document.getElementById(&#39;root&#39;));</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; If you want your app to work offline and load faster, you can change</span><br><span class="line">&#x2F;&#x2F; unregister() to register() below. Note this comes with some pitfalls.</span><br><span class="line">&#x2F;&#x2F; Learn more about service workers: https:&#x2F;&#x2F;bit.ly&#x2F;CRA-PWA</span><br><span class="line">serviceWorker.unregister();</span><br></pre></td></tr></table></figure>
+
+<p>其中关键的是, <code>ReactDOM.render();</code>以上含义是将<code>APP</code>组件挂载到<code>root</code>上.那么这个<code>root</code>,又是哪里的.</p>
+<p>到<code>public\index.html</code>文件下有:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">noscript</span>&gt;</span>You need to enable JavaScript to run this app.<span class="tag">&lt;/<span class="name">noscript</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"root"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>发现在该<code>html</code>文件下, <code>&lt;div id=&quot;root&quot;&gt;&lt;/div&gt;</code>, 所以其实是让该组件挂载到该组件下.</p>
+<p>所以我们可以修改挂载的内容.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ReactDOM.render(&lt;h2&gt;hello world&lt;&#x2F;h2&gt;, document.getElementById(&#39;root&#39;));</span><br></pre></td></tr></table></figure>
+
+<p>再次运行应该就能看到 <code>hello world</code>, 访问<a href="http://localhost:3000" target="_blank" rel="noopener">http://localhost:3000</a>.</p>
+<h3 id="了解JSX"><a href="#了解JSX" class="headerlink" title="了解JSX"></a>了解<code>JSX</code></h3><p>它是一个 JavaScript 的语法扩展.它跟模板语言有点类似, 作用当然是让视图与数据进行分离, 从而使得组件进行复用.<code>JSX</code>可以生成 <code>React</code> “元素”.</p>
+<p>示例: 对于刚才的 <code>hello world</code>,我们就可以利用.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">const name &#x3D; &#39;Veng&#39;;</span><br><span class="line">const element &#x3D; &lt;h2&gt;hello ,&#123;name&#125;&lt;&#x2F;h2&gt;;</span><br><span class="line">ReactDOM.render(element, document.getElementById(&#39;root&#39;));</span><br></pre></td></tr></table></figure>
+
+<p>这样就可以对视图和数据及进行分离, 可以动态的生成视图,变量用花括号<code>{}</code>括起来,并且这样模式是防注入攻击的, 就算是用户输入, 它会将输入内容转化为字符串解析.</p>
+<p>实际上, 最好的做法是将组件单独成一个模块,然后再导入,跟之前原始的<code>&lt;App/&gt;</code> 一样.</p>
+<blockquote>
+<p><strong>注意</strong>:</p>
+<p>要使用JSX,必须导入React才能够用.<code>import React from &#39;react&#39;;</code></p>
+</blockquote>
+<h3 id="元素渲染"><a href="#元素渲染" class="headerlink" title="元素渲染"></a>元素渲染</h3><p>什么是元素, 就像刚刚的 <code>const element = &lt;h2&gt;hello ,{name}&lt;/h2&gt;;</code>就是元素.与浏览器的 DOM 元素不同，React 元素是创建开销极小的普通对象。React DOM 会负责更新 DOM 来与 React 元素保持一致。</p>
+<blockquote>
+<p><strong>注意：</strong></p>
+<p>你可能会将元素与另一个被熟知的概念——“组件”混淆起来。组件是由元素构成的。</p>
+</blockquote>
+<h4 id="更新已渲染的元素"><a href="#更新已渲染的元素" class="headerlink" title="更新已渲染的元素."></a>更新已渲染的元素.</h4><p>React 元素是不可变对象。一旦被创建，你就无法更改它的子元素或者属性。一个元素就像电影的单帧：它代表了某个特定时刻的 UI。</p>
+<p>根据我们已有的知识，更新 UI 唯一的方式是创建一个全新的元素，并将其传入 <code>ReactDOM.render()</code>。</p>
+<p>示例: 时间显示器</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">function tick() &#123;</span><br><span class="line">  const element &#x3D; (</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">      &lt;h2&gt;it is &#123;new Date().toLocaleString()&#125;&lt;&#x2F;h2&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;);</span><br><span class="line">  ReactDOM.render(element, document.getElementById(&#39;root&#39;));</span><br><span class="line">&#125;</span><br><span class="line">setInterval(tick, 1000);</span><br></pre></td></tr></table></figure>
+
+<p>这个例子会在 <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowTimers/setInterval" target="_blank" rel="noopener"><code>setInterval()</code></a> 回调函数，每秒都调用 <code>ReactDOM.render()</code>.</p>
+<blockquote>
+<p>在实践中，大多数 React 应用只会调用一次 <code>ReactDOM.render()</code>.</p>
+</blockquote>
+<p>上面的例子中, 虽然我们对整个页面进行更新,但是实际上<code>React</code>只进行了局部更新.<code>React DOM</code>会将元素和它的子元素与它们之前的状态进行比较，并只会进行必要的更新来使 <code>DOM</code> 达到预期的状态。</p>
+<p>为了验证渲染的部分,可以观察 <code>DOM</code>结构:</p>
+<p><img src="/2020/03/18/react-demo/assets/sky10.1.gif" alt="dom"></p>
+<p>但是实际上, 我们需要的并不是<code>UI</code>随时间的变化而变化, 而是在在任意时刻给定状态. 由此就有了组件.</p>
+<h3 id="组件-props"><a href="#组件-props" class="headerlink" title="组件 props"></a>组件 props</h3><p>组件，从概念上类似于 JavaScript 函数。它接受任意的入参（即 “props”），并返回用于描述页面展示内容的 React 元素。</p>
+<h4 id="定义组件"><a href="#定义组件" class="headerlink" title="定义组件"></a>定义组件</h4><ol>
+<li>开始定义第一个组件<code>src/components/Welcome.js</code>,有两种方式创建组件一种是通过函数,一种是通过<code>class</code>.</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">import React from &#39;react&#39;;</span><br><span class="line"></span><br><span class="line">function Welcome(props) &#123;</span><br><span class="line">  return (&lt;h2&gt;hello,&#123;props.name&#125;&lt;&#x2F;h2&gt;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">export default Welcome;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">import React from &#39;react&#39;;</span><br><span class="line"></span><br><span class="line">class Welcome extends React.Component&#123;</span><br><span class="line">  render()&#123;</span><br><span class="line">    return &lt;h2&gt;hello,&#123;this.props.name&#125;&lt;&#x2F;h2&gt;;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">export default Welcome;</span><br></pre></td></tr></table></figure>
+
+<p>每次组件更新时 <code>render</code> 方法都会被调用.</p>
+<ol start="2">
+<li><code>src/index.js</code>,引入组件,并导入数据.</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import Welcome from &#39;.&#x2F;components&#x2F;Welcome&#39;;</span><br><span class="line"></span><br><span class="line">ReactDOM.render(&lt;Welcome name&#x3D;&quot;Veng&quot;&#x2F;&gt;, document.getElementById(&#39;root&#39;));</span><br></pre></td></tr></table></figure>
+
+<h4 id="复用组件"><a href="#复用组件" class="headerlink" title="复用组件"></a>复用组件</h4><p>从组件的构成可以看出,各自组件的数据是互不影响的.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">function App() &#123;</span><br><span class="line">  return (</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">      &lt;Welcome name&#x3D;&quot;A&quot; &#x2F;&gt;</span><br><span class="line">      &lt;Welcome name&#x3D;&quot;B&quot; &#x2F;&gt;</span><br><span class="line">      &lt;Welcome name&#x3D;&quot;C&quot; &#x2F;&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>通常来说，每个新的 React 应用程序的顶层组件都是 <code>App</code> 组件。但是，如果你将 React 集成到现有的应用程序中，你可能需要使用像 <code>Button</code> 这样的小组件，并自下而上地将这类组件逐步应用到视图层的每一处。</p>
+</blockquote>
+<p>总得来说,就是组件的复用程度越高越好,这样也就更加的灵活.</p>
+<blockquote>
+<p>组件无论是使用<a href="https://react.docschina.org/docs/components-and-props.html#function-and-class-components" target="_blank" rel="noopener">函数声明还是通过 class 声明</a>，都决不能修改自身的 props</p>
+</blockquote>
+<p>那么为什么自身的<code>props</code>不能被修改? 因为如果出现这样情况,子组件的<code>props</code>是来自父组件,那么如果自组件的<code>props</code>值改变了,父组件也会改变.实际上,我们不能让这种情况发生.故而有了一个保存组件状态值的一个参数<code>state</code>,<code>props</code>仅仅用来初始化,<code>state</code>用来保存组件的状态,往子组件传递数据时用的是<code>state</code>,子组件用<code>props</code>接收,用自身得<code>state</code>保存状态,这样子递归,每个组件的状态<code>state</code>都是私有得.</p>
+<h3 id="State-和-生命周期"><a href="#State-和-生命周期" class="headerlink" title="State 和 生命周期"></a>State 和 生命周期</h3><p>之前的时间显示,是每次都需要<code>Render</code>,我们希望,编写一次代码,便可以让时间组件自我更新:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ReactDOM.render(</span><br><span class="line">  &lt;Clock &#x2F;&gt;,</span><br><span class="line">  document.getElementById(&#39;root&#39;)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<p>我们需要在 <code>Clock</code> 组件中添加 “state” 来实现这个功能。</p>
+<p>State 与 props 类似，但是 state 是私有的，并且完全受控于当前组件。</p>
+<ol>
+<li>先将时间信息放在<code>state</code>里.</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">import React from &#39;react&#39;;</span><br><span class="line"></span><br><span class="line">class Clock extends React.Component &#123;</span><br><span class="line">  constructor(props) &#123;</span><br><span class="line">    super(props);</span><br><span class="line">    this.state &#x3D; &#123; date: new Date() &#125;;</span><br><span class="line">  &#125;</span><br><span class="line">  render() &#123;</span><br><span class="line">    return (</span><br><span class="line">      &lt;div&gt;</span><br><span class="line">        &lt;h2&gt;it is &#123;this.state.date.toLocaleString()&#125;&lt;&#x2F;h2&gt;</span><br><span class="line">      &lt;&#x2F;div&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">export default Clock;</span><br></pre></td></tr></table></figure>
+
+<p><code>constructor</code>是构造器,初始化状态.</p>
+<p>这样子写了之后,时间并没自动更新,所以怎么让<code>state.date</code>更新? 同样得,我们可以设置一个计时器来进行对其更新.</p>
+<p>那么计时器在哪里设置. 组件提供了第一次渲染时的函数<code>componentDidMount</code>,在<code>React</code>称之为<code>挂载 mount</code>,还有组件被删除时的函数<code>componentWillUnmount</code>,在<code>React</code>称之为<code>卸载 unmount</code>.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">import React from &quot;react&quot;;</span><br><span class="line"></span><br><span class="line">class Clock extends React.Component &#123;</span><br><span class="line">  constructor(props) &#123;</span><br><span class="line">    super(props);</span><br><span class="line">    this.state &#x3D; &#123; date: new Date() &#125;;</span><br><span class="line">  &#125;</span><br><span class="line">  componentDidMount() &#123;</span><br><span class="line">    this.timerId &#x3D; setInterval(() &#x3D;&gt; &#123;</span><br><span class="line">      this.setState(&#123;</span><br><span class="line">        date: new Date()</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;, 1000);</span><br><span class="line">  &#125;</span><br><span class="line">  componentWillUnmount() &#123;</span><br><span class="line">    clearInterval(this.timerId);</span><br><span class="line">  &#125;</span><br><span class="line">  render() &#123;</span><br><span class="line">    return (</span><br><span class="line">      &lt;div&gt;</span><br><span class="line">        &lt;h2&gt;it is &#123;this.state.date.toLocaleString()&#125;&lt;&#x2F;h2&gt;</span><br><span class="line">      &lt;&#x2F;div&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">export default Clock;</span><br></pre></td></tr></table></figure>
+
+<p>快速概括一下发生了什么和这些方法的调用顺序：</p>
+<blockquote>
+<ol>
+<li>当 <code>&lt;Clock /&gt;</code> 被传给 <code>ReactDOM.render()</code>的时候，React 会调用 <code>Clock</code> 组件的构造函数。因为 <code>Clock</code> 需要显示当前的时间，所以它会用一个包含当前时间的对象来初始化 <code>this.state</code>。我们会在之后更新 state。</li>
+<li>之后 React 会调用组件的 <code>render()</code> 方法。这就是 React 确定该在页面上展示什么的方式。然后 React 更新 DOM 来匹配 <code>Clock</code> 渲染的输出。</li>
+<li>当 <code>Clock</code> 的输出被插入到 DOM 中后，React 就会调用 <code>ComponentDidMount()</code> 生命周期方法。在这个方法中，<code>Clock</code> 组件向浏览器请求设置一个计时器来每秒调用<code>setState()</code>。</li>
+<li><code>Clock</code> 组件会通过调用 <code>setState()</code> 来计划进行一次 UI 更新。得益于 <code>setState()</code> 的调用，React 能够知道 state 已经改变了，然后会重新调用 <code>render()</code> 方法来确定页面上该显示什么。这一次，<code>render()</code> 方法中的 <code>this.state.date</code> 就不一样了，如此以来就会渲染输出更新过的时间。React 也会相应的更新 DOM。</li>
+<li>一旦 <code>Clock</code> 组件从 DOM 中被移除，React 就会调用 <code>componentWillUnmount()</code> 生命周期方法，这样计时器就停止了</li>
+</ol>
+</blockquote>
+<p>关于 <code>setState()</code>:</p>
+<p>为什么不直接修改:<code>this.state.date=new Date()</code>? 代码没问题,但是这样子修改并不会通知组件,<code>state</code> 变了,所以构造函数是唯一可以给<code>this.state</code>赋值的地方.</p>
+<blockquote>
+<p>出于性能考虑，React 可能会把多个 <code>setState()</code> 调用合并成一个调用。</p>
+<p>因为 <code>this.props</code> 和 <code>this.state</code> 可能会异步更新，所以你不要依赖他们的值来更新下一个状态。</p>
+</blockquote>
+<p>例如，此代码可能会无法更新计数器：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; Wrong</span><br><span class="line">this.setState(&#123;</span><br><span class="line">  counter: this.state.counter + this.props.increment,</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>可能当前组件的通知排在前面,而后面又改变了,但是排在了后面.</p>
+<p>要解决这个问题,可以让<code>setState()</code>接收一个函数而不是一个对象,这样渲染得时候保存是一个函数,就会回调.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; Correct</span><br><span class="line">this.setState((state, props) &#x3D;&gt; (&#123;</span><br><span class="line">  counter: state.counter + props.increment</span><br><span class="line">&#125;));</span><br></pre></td></tr></table></figure>
+
+<p>state 的存在,数据是自上往下流动的.</p>
+<blockquote>
+<p>这个函数用上一个 state 作为第一个参数，将此次更新被应用时的 props 做为第二个参数,顺序记住.</p>
+</blockquote>
+<h3 id="事件处理"><a href="#事件处理" class="headerlink" title="事件处理"></a>事件处理</h3><p>React 元素的事件处理和 DOM 元素的很相似，但是有一点语法上的不同:</p>
+<ul>
+<li>React 事件的命名采用小驼峰式（camelCase），而不是纯小写。</li>
+<li>使用 JSX 语法时你需要传入一个函数作为事件处理函数，而不是一个字符串。</li>
+</ul>
+<p>示例:</p>
+<p>传统dom</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">"activateLasers()"</span>&gt;</span></span><br><span class="line">  Activate Lasers</span><br><span class="line"><span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>react:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;button onClick&#x3D;&#123;activateLasers&#125;&gt;</span><br><span class="line">  Activate Lasers</span><br><span class="line">&lt;&#x2F;button&gt;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>在 React 中另一个不同点是你不能通过返回 <code>false</code> 的方式阻止默认行为。你必须显式的使用 <code>preventDefault</code>.</p>
+</blockquote>
+<p>示例:</p>
+<p>传统的 HTML 中阻止链接默认打开一个新页面，你可以这样写：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span> <span class="attr">onclick</span>=<span class="string">"console.log('The link was clicked.'); return false"</span>&gt;</span></span><br><span class="line">  Click me</span><br><span class="line"><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>React 中，可能是这样的：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">function ActionLink() &#123;</span><br><span class="line">function handleClick(e) &#123;</span><br><span class="line">    e.preventDefault();</span><br><span class="line">    console.log(&#39;The link was clicked.&#39;);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  return (</span><br><span class="line">    &lt;a href&#x3D;&quot;#&quot; onClick&#x3D;&#123;handleClick&#125;&gt;</span><br><span class="line">      Click me</span><br><span class="line">    &lt;&#x2F;a&gt;</span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这样<code>a</code>标签的默认点击事件不会触发,页面不会跳转,这就是<code>preventDefault</code>的作用.</p>
+<p>在这里，<code>e</code> 是一个合成事件。React 根据 <a href="https://www.w3.org/TR/DOM-Level-3-Events/" target="_blank" rel="noopener">W3C 规范</a>来定义这些合成事件，所以你不需要担心跨浏览器的兼容性问题。</p>
+<p>使用 React 时，你一般不需要使用 <code>addEventListener</code> 为已创建的 DOM 元素添加监听器。事实上，你只需要在该元素初始渲染的时候添加监听器即可。</p>
+<p>当你使用 <a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Classes" target="_blank" rel="noopener">ES6 class</a> 语法定义一个组件的时候，通常的做法是将事件处理函数声明为 class 中的方法.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">import React from &#39;react&#39;;</span><br><span class="line"></span><br><span class="line">class Toggle extends React.Component &#123;</span><br><span class="line">  constructor(props) &#123;</span><br><span class="line">    super(props);</span><br><span class="line">    this.state &#x3D; &#123; isToggle: true &#125;;</span><br><span class="line"></span><br><span class="line">    this.handleToggleClick &#x3D; this.handleToggleClick.bind(this);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  handleToggleClick() &#123;</span><br><span class="line">    this.setState(state &#x3D;&gt; (&#123;</span><br><span class="line">      isToggle: !state.isToggle,</span><br><span class="line">    &#125;));</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  render() &#123;</span><br><span class="line">    return (</span><br><span class="line">      &lt;div&gt;</span><br><span class="line">        &lt;button onClick&#x3D;&#123;this.handleToggleClick&#125;&gt;</span><br><span class="line">          &#123;this.state.isToggle ? &#39;ON&#39; : &#39;OFF&#39;&#125;</span><br><span class="line">        &lt;&#x2F;button&gt;</span><br><span class="line">      &lt;&#x2F;div&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">export default Toggle;</span><br></pre></td></tr></table></figure>
+
+<p>其中的处理点击事件的方法,我们在初始化的时候给其绑定了this<code>this.handleToggleClick = this.handleToggleClick.bind(this);</code>,使得函数里的<code>this</code>指向组件,否则函数里的<code>this</code>是```undefined<code>,你必须谨慎对待 JSX 回调函数中的</code>this<code>,在 JavaScript 中，class 的方法默认不会绑定</code>this`。</p>
+<p>如果你觉得<code>bind</code>这样麻烦,我们可以利用箭头函数.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">handleToggleClick &#x3D; () &#x3D;&gt; &#123;</span><br><span class="line">  this.setState(state &#x3D;&gt; (&#123;</span><br><span class="line">    isToggle: !state.isToggle,</span><br><span class="line">  &#125;));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这样就不用<code>bind</code>了,这里的<code>this</code>会指向组件.</p>
+<p>亦或者:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">render() &#123;</span><br><span class="line">  return (</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">      &lt;button onClick&#x3D;&#123;e&#x3D;&gt;this.handleToggleClick(e)&#125;&gt;</span><br><span class="line">        &#123;this.state.isToggle ? &#39;ON&#39; : &#39;OFF&#39;&#125;</span><br><span class="line">      &lt;&#x2F;button&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这样也是可行的,不过以上推荐第二种.</p>
+<h3 id="条件渲染"><a href="#条件渲染" class="headerlink" title="条件渲染"></a>条件渲染</h3><p>在 React 中，你可以创建不同的组件来封装各种你需要的行为。然后，依据应用的不同状态，你可以只渲染对应状态下的部分内容。</p>
+<p>示例:</p>
+<p><code>src\components\Greeting.js</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">import React from &#39;react&#39;;</span><br><span class="line"></span><br><span class="line">function GuestGreeting() &#123;</span><br><span class="line">  return &lt;h1&gt;Please sign in!&lt;&#x2F;h1&gt;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function UserGreeting() &#123;</span><br><span class="line">  return &lt;h1&gt;Welcome back!&lt;&#x2F;h1&gt;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function Greeting(props) &#123;</span><br><span class="line">  const &#123; isLogin &#125; &#x3D; props;</span><br><span class="line">  return isLogin ? &lt;UserGreeting &#x2F;&gt; : &lt;GuestGreeting &#x2F;&gt;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">export default Greeting;</span><br></pre></td></tr></table></figure>
+
+<p><code>src\index.js</code>:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import Greeting from &#39;.&#x2F;components&#x2F;Greeting&#39;;</span><br><span class="line"></span><br><span class="line">ReactDOM.render(&lt;Greeting isLogin&#x3D;&#123;false&#125; &#x2F;&gt;, document.getElementById(&#39;root&#39;));</span><br></pre></td></tr></table></figure>
+
+<p>这里组件会根据登录状况来返回不同的问候语.</p>
+<p>复杂一点条件: 添加登录登出按钮.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">import React from &#39;react&#39;;</span><br><span class="line">import Greeting from &#39;.&#x2F;Greeting&#39;;</span><br><span class="line"></span><br><span class="line">class GreetingWithButton extends React.Component &#123;</span><br><span class="line">  constructor(props) &#123;</span><br><span class="line">    super(props);</span><br><span class="line">    this.state &#x3D; &#123; isLogin: props.isLogin &#125;;</span><br><span class="line">  &#125;</span><br><span class="line">  handleLoginClick &#x3D; () &#x3D;&gt; &#123;</span><br><span class="line">    this.setState(&#123;</span><br><span class="line">      isLogin: true,</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;</span><br><span class="line">  handleLogoutClick &#x3D; () &#x3D;&gt; &#123;</span><br><span class="line">    this.setState(&#123;</span><br><span class="line">      isLogin: false,</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;</span><br><span class="line">  render() &#123;</span><br><span class="line">    const &#123; isLogin &#125; &#x3D; this.state;</span><br><span class="line">    const button &#x3D; isLogin ? &lt;button onClick&#x3D;&#123;this.handleLogoutClick&#125;&gt;Logout&lt;&#x2F;button&gt;</span><br><span class="line">      : &lt;button onClick&#x3D;&#123;this.handleLoginClick&#125;&gt;Login&lt;&#x2F;button&gt;</span><br><span class="line">    return (</span><br><span class="line">      &lt;div&gt;</span><br><span class="line">        &lt;Greeting isLogin&#x3D;&#123;this.state.isLogin&#125; &#x2F;&gt;</span><br><span class="line">        &#123;button&#125;</span><br><span class="line">      &lt;&#x2F;div&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">export default GreetingWithButton;</span><br></pre></td></tr></table></figure>
+
+<h4 id="阻止渲染"><a href="#阻止渲染" class="headerlink" title="阻止渲染"></a>阻止渲染</h4><p>在极少数情况下，你可能希望能隐藏组件，即使它已经被其他组件渲染。若要完成此操作，你可以让 <code>render</code> 方法直接返回 <code>null</code>，而不进行任何渲染。</p>
+<p>示例:显示隐藏警告!</p>
+<p><code>src\components\Warning.js</code>:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">import React from &#39;react&#39;;</span><br><span class="line"></span><br><span class="line">class Warning extends React.Component &#123;</span><br><span class="line">  render() &#123;</span><br><span class="line">    const &#123; warn &#125; &#x3D; this.props;</span><br><span class="line">    return warn ? (</span><br><span class="line">      &lt;div className&#x3D;&#39;warning&#39;&gt;</span><br><span class="line">        Warning!</span><br><span class="line">      &lt;&#x2F;div&gt;</span><br><span class="line">    ) : null;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">export default Warning;</span><br></pre></td></tr></table></figure>
+
+<p><code>src\components\Page.js</code>:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">import React from &#39;react&#39;;</span><br><span class="line">import Warning from &#39;.&#x2F;Warning&#39;;</span><br><span class="line"></span><br><span class="line">class Page extends React.Component &#123;</span><br><span class="line"></span><br><span class="line">  constructor(props) &#123;</span><br><span class="line">    super(props);</span><br><span class="line">    this.state &#x3D; &#123; showWarning: false &#125;;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  handleClick &#x3D; () &#x3D;&gt; &#123;</span><br><span class="line">    this.setState(state &#x3D;&gt; (&#123;</span><br><span class="line">      showWarning: !state.showWarning</span><br><span class="line">    &#125;));</span><br><span class="line">  &#125;</span><br><span class="line">  render() &#123;</span><br><span class="line">    const showWarning &#x3D; this.state.showWarning;</span><br><span class="line">    return (</span><br><span class="line">      &lt;div&gt;</span><br><span class="line">        &lt;Warning warn&#x3D;&#123;showWarning&#125; &#x2F;&gt;</span><br><span class="line">        &lt;button onClick&#x3D;&#123;this.handleClick&#125;&gt;&#123;showWarning ? &#39;Hide&#39; : &#39;Show&#39;&#125;&lt;&#x2F;button&gt;</span><br><span class="line">      &lt;&#x2F;div&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">export default Page;</span><br></pre></td></tr></table></figure>
+
+<p><code>src\index.js</code>:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import Page from &#39;.&#x2F;components&#x2F;Page&#39;;</span><br><span class="line"></span><br><span class="line">ReactDOM.render(&lt;Page &#x2F;&gt;, document.getElementById(&#39;root&#39;));</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>在组件的 <code>render</code> 方法中返回 <code>null</code> 并不会影响组件的生命周期.</p>
+</blockquote>
+<h3 id="列表-和-key"><a href="#列表-和-key" class="headerlink" title="列表 和 key"></a>列表 和 key</h3><p>利用<code>map</code>函数.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">import React from &#39;react&#39;;</span><br><span class="line"></span><br><span class="line">class NumberList extends React.Component &#123;</span><br><span class="line"></span><br><span class="line">  render() &#123;</span><br><span class="line">    const &#123; numbers &#125; &#x3D; this.props;</span><br><span class="line">    const listItems &#x3D; numbers.map(number &#x3D;&gt; &#123;</span><br><span class="line">      return &lt;li&gt;&#123;number&#125;&lt;&#x2F;li&gt;</span><br><span class="line">    &#125;);</span><br><span class="line">    return &lt;ul&gt;&#123;listItems&#125;&lt;&#x2F;ul&gt;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">export default NumberList;</span><br></pre></td></tr></table></figure>
+
+<p>将该组件挂载到<code>root</code>上面,会发现有一个<code>warning</code>:</p>
+<p><img src="/2020/03/18/react-demo/1584454829695.png" alt="1584454829695"></p>
+<p>意思是当你创建一个元素时，必须包括一个特殊的 <code>key</code> 属性。</p>
+<p>按照它的警告我们为每个元素加上:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">const listItems &#x3D; numbers.map(number &#x3D;&gt; &#123;</span><br><span class="line">	return &lt;li key&#x3D;&#123;number&#125;&gt;&#123;number&#125;&lt;&#x2F;li&gt;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>这样警告消除了.</p>
+<p>那么<code>Key</code>的作用是什么呢?</p>
+<h4 id="Key"><a href="#Key" class="headerlink" title="Key"></a>Key</h4><p>key 帮助 React 识别哪些元素改变了，比如被添加或删除。因此你应当给数组中的每一个元素赋予一个确定的标识。</p>
+<p>一个元素的 key 最好是这个元素在列表中拥有的一个独一无二的字符串。通常，我们使用数据中的 id 来作为元素的 key.</p>
+<p>数组元素中使用的 key 在其兄弟节点之间应该是独一无二的。然而，它们不需要是全局唯一的。当我们生成两个不同的数组时，我们可以使用相同的 key 值.</p>
+<p>当元素没有确定 id 的时候，万不得已你可以使用元素索引 index 作为 key：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">const todoItems &#x3D; todos.map((todo, index) &#x3D;&gt;</span><br><span class="line">  &#x2F;&#x2F; Only do this if items have no stable IDs</span><br><span class="line">  &lt;li key&#x3D;&#123;index&#125;&gt;</span><br><span class="line">    &#123;todo.text&#125;</span><br><span class="line">  &lt;&#x2F;li&gt;</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>如果列表项目的顺序可能会变化，我们不建议使用索引来用作 key 值，因为这样做会导致性能变差，还可能引起组件状态的问题。</p>
+<p>如果你选择不指定显式的 key 值，那么 React 将默认使用索引用作为列表项目的 key 值。</p>
+</blockquote>
+<p><font color="#dd001b">元素的 key 只有放在就近的数组上下文中才有意义。</font></p>
+<p>示例:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">function ListItem(props) &#123;</span><br><span class="line">  &#x2F;&#x2F; 正确！这里不需要指定 key：</span><br><span class="line">  return &lt;li&gt;&#123;props.value&#125;&lt;&#x2F;li&gt;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function NumberList(props) &#123;</span><br><span class="line">  const numbers &#x3D; props.numbers;</span><br><span class="line">  const listItems &#x3D; numbers.map((number) &#x3D;&gt;</span><br><span class="line">    &#x2F;&#x2F; 正确！key 应该在数组的上下文中被指定</span><br><span class="line">    &lt;ListItem key&#x3D;&#123;number.toString()&#125;</span><br><span class="line">              value&#x3D;&#123;number&#125; &#x2F;&gt;</span><br><span class="line">  );</span><br><span class="line">  return (</span><br><span class="line">    &lt;ul&gt;</span><br><span class="line">      &#123;listItems&#125;</span><br><span class="line">    &lt;&#x2F;ul&gt;</span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这里的<code>key</code>是放在<code>ListItem</code>上而不是<code>li</code>上,因为就近数组的上下文在<code>ListItem</code>这里.</p>
+<blockquote>
+<p>一个好的经验法则是：在 <code>map()</code> 方法中的元素需要设置 key 属性。</p>
+</blockquote>
+<p>还有就是对于key属性,它不会传值给组件.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">const content &#x3D; posts.map((post) &#x3D;&gt;</span><br><span class="line">  &lt;Post</span><br><span class="line">    key&#x3D;&#123;post.id&#125;</span><br><span class="line">    id&#x3D;&#123;post.id&#125;</span><br><span class="line">    title&#x3D;&#123;post.title&#125; &#x2F;&gt;</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<p><code>Post</code>组件的<code>props</code>读不到<code>key</code>,但是可以读取到<code>props.id</code>和<code>props.title</code>.</p>
+<h3 id="表单"><a href="#表单" class="headerlink" title="表单"></a>表单</h3><p>在 React 里，HTML 表单元素的工作方式和其他的 DOM 元素有些不同，这是因为表单元素通常会保持一些内部的 state。</p>
+<p>在 HTML 中，表单元素（如<code>&lt;input&gt;</code>、 <code>&lt;textarea&gt;</code> 和 <code>&lt;select&gt;</code>）之类的表单元素通常自己维护 state，并根据用户输入进行更新。而在 React 中，可变状态（mutable state）通常保存在组件的 state 属性中，并且只能通过使用 <a href="https://react.docschina.org/docs/react-component.html#setstate" target="_blank" rel="noopener"><code>setState()</code></a>来更新。我们可以把两者结合起来，使 React 的 state 成为“唯一数据源”。渲染表单的 React 组件还控制着用户输入过程中表单发生的操作。被 React 以这种方式控制取值的表单输入元素就叫做“<strong>受控组件</strong>”。</p>
+<p>示例:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">import React from &#39;react&#39;;</span><br><span class="line"></span><br><span class="line">class NameForm extends React.Component &#123;</span><br><span class="line">  constructor(props) &#123;</span><br><span class="line">    super(props);</span><br><span class="line">    this.state &#x3D; &#123; value: &#39;&#39; &#125;;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  handleChange &#x3D; (e) &#x3D;&gt; &#123;</span><br><span class="line">    this.setState(&#123;</span><br><span class="line">      value: e.target.value,</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  handleSubmit &#x3D; (e) &#x3D;&gt; &#123;</span><br><span class="line">    console.log(this.state.value);</span><br><span class="line">    e.preventDefault();</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  render() &#123;</span><br><span class="line">    return (</span><br><span class="line">      &lt;form onSubmit&#x3D;&#123;this.handleSubmit&#125;&gt;</span><br><span class="line">        &lt;input value&#x3D;&#123;this.state.value&#125; onChange&#x3D;&#123;this.handleChange&#125; &#x2F;&gt;</span><br><span class="line">        &lt;input type&#x3D;&#39;submit&#39; value&#x3D;&#39;提交&#39; &#x2F;&gt;</span><br><span class="line">      &lt;&#x2F;form&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">export default NameForm;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/2020/03/18/react-demo/assets/sky10.2.gif" alt="图像"></p>
+<p>以上将<code>input</code>的值绑定在了该组件的<code>state</code>.</p>
+<h4 id="处理多个输入"><a href="#处理多个输入" class="headerlink" title="处理多个输入"></a>处理多个输入</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line">import React from &#39;react&#39;;</span><br><span class="line"></span><br><span class="line">class Reservation extends React.Component &#123;</span><br><span class="line">  constructor(props) &#123;</span><br><span class="line">    super(props);</span><br><span class="line">    this.state &#x3D; &#123;</span><br><span class="line">      isGoing: true,</span><br><span class="line">      numberOfGuests: 2</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  handleInputChange &#x3D; (event) &#x3D;&gt; &#123;</span><br><span class="line">    const target &#x3D; event.target;</span><br><span class="line">    const value &#x3D; target.type &#x3D;&#x3D;&#x3D; &#39;checkbox&#39; ? target.checked : target.value;</span><br><span class="line">    const name &#x3D; target.name;</span><br><span class="line"></span><br><span class="line">    this.setState(&#123;</span><br><span class="line">      [name]: value</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  render() &#123;</span><br><span class="line">    return (</span><br><span class="line">      &lt;form&gt;</span><br><span class="line">        &lt;label&gt;</span><br><span class="line">          参与:</span><br><span class="line">          &lt;input</span><br><span class="line">            name&#x3D;&quot;isGoing&quot;</span><br><span class="line">            type&#x3D;&quot;checkbox&quot;</span><br><span class="line">            checked&#x3D;&#123;this.state.isGoing&#125;</span><br><span class="line">            onChange&#x3D;&#123;this.handleInputChange&#125; &#x2F;&gt;</span><br><span class="line">        &lt;&#x2F;label&gt;</span><br><span class="line">        &lt;br &#x2F;&gt;</span><br><span class="line">        &lt;label&gt;</span><br><span class="line">          来宾人数:</span><br><span class="line">          &lt;input</span><br><span class="line">            name&#x3D;&quot;numberOfGuests&quot;</span><br><span class="line">            type&#x3D;&quot;number&quot;</span><br><span class="line">            value&#x3D;&#123;this.state.numberOfGuests&#125;</span><br><span class="line">            onChange&#x3D;&#123;this.handleInputChange&#125; &#x2F;&gt;</span><br><span class="line">        &lt;&#x2F;label&gt;</span><br><span class="line">      &lt;&#x2F;form&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">export default Reservation;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/2020/03/18/react-demo/assets/sky10.3.gif" alt></p>
+<p>这个例子中,两个<code>input</code>绑定的同一个函数,函数中通过<code>name</code>来获悉是哪个组件,并且<code>name</code>与<code>state</code>里的属性名相同.</p>
+<h3 id="状态的提升"><a href="#状态的提升" class="headerlink" title="状态的提升"></a>状态的提升</h3><p>现在是有这么个需求,有两个输入框,一个输入框是摄氏度,一个是华氏度,只要输入的温度,两个框会自动同步转换,也就是兄弟组件之间怎么传递数据的问题.</p>
+<p>先写温度输入框组件:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">const scaleNames &#x3D; &#123;</span><br><span class="line">  c: &#39;Celsius&#39;,</span><br><span class="line">  f: &#39;Fahrenheit&#39;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">class TemperatureInput extends React.Component &#123;</span><br><span class="line">  constructor(props) &#123;</span><br><span class="line">    super(props);</span><br><span class="line">    this.handleChange &#x3D; this.handleChange.bind(this);</span><br><span class="line">    this.state &#x3D; &#123;temperature: &#39;&#39;&#125;;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  handleChange(e) &#123;</span><br><span class="line">    this.setState(&#123;temperature: e.target.value&#125;);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  render() &#123;</span><br><span class="line">    const temperature &#x3D; this.state.temperature;</span><br><span class="line">    const scale &#x3D; this.props.scale;</span><br><span class="line">    return (</span><br><span class="line">      &lt;fieldset&gt;</span><br><span class="line">        &lt;legend&gt;Enter temperature in &#123;scaleNames[scale]&#125;:&lt;&#x2F;legend&gt;</span><br><span class="line">        &lt;input value&#x3D;&#123;temperature&#125;</span><br><span class="line">               onChange&#x3D;&#123;this.handleChange&#125; &#x2F;&gt;</span><br><span class="line">      &lt;&#x2F;fieldset&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>父组件:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">class Calculator extends React.Component &#123;</span><br><span class="line">  render() &#123;</span><br><span class="line">    return (</span><br><span class="line">      &lt;div&gt;</span><br><span class="line">        &lt;TemperatureInput scale&#x3D;&quot;c&quot; &#x2F;&gt;</span><br><span class="line">        &lt;TemperatureInput scale&#x3D;&quot;f&quot; &#x2F;&gt;</span><br><span class="line">      &lt;&#x2F;div&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>但是有一个问题,两个温度输入框的温度都保存在自己的<code>state</code>里,两者怎么进行数据的交互?</p>
+<p>解决方案是,将温度的接收提升到父组件,也就是说温度输入框的数据,是由父组件传递过来的<code>props</code>决定.</p>
+<p>温度输入框组件修改为:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">class TemperatureInput extends React.Component &#123;</span><br><span class="line">  constructor(props) &#123;</span><br><span class="line">    super(props);</span><br><span class="line">    this.handleChange &#x3D; this.handleChange.bind(this);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  handleChange(e) &#123;</span><br><span class="line">    this.props.onTemperatureChange(e.target.value);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  render() &#123;</span><br><span class="line">    const temperature &#x3D; this.props.temperature;</span><br><span class="line">    const scale &#x3D; this.props.scale;</span><br><span class="line">    return (</span><br><span class="line">      &lt;fieldset&gt;</span><br><span class="line">        &lt;legend&gt;Enter temperature in &#123;scaleNames[scale]&#125;:&lt;&#x2F;legend&gt;</span><br><span class="line">        &lt;input value&#x3D;&#123;temperature&#125;</span><br><span class="line">               onChange&#x3D;&#123;this.handleChange&#125; &#x2F;&gt;</span><br><span class="line">      &lt;&#x2F;fieldset&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>现在输入框的数据由父组件传入所决定,并且<code>onChange</code>绑定调用的是有父组件传递的函数.</p>
+<p>父组件修改为:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 温度转换的函数</span><br><span class="line">function toCelsius(fahrenheit) &#123;</span><br><span class="line">  return (fahrenheit - 32) * 5 &#x2F; 9;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function toFahrenheit(celsius) &#123;</span><br><span class="line">  return (celsius * 9 &#x2F; 5) + 32;</span><br><span class="line">&#125;</span><br><span class="line">function tryConvert(temperature, convert) &#123;</span><br><span class="line">  const input &#x3D; parseFloat(temperature);</span><br><span class="line">  if (Number.isNaN(input)) &#123;</span><br><span class="line">    return &#39;&#39;;</span><br><span class="line">  &#125;</span><br><span class="line">  const output &#x3D; convert(input);</span><br><span class="line">  const rounded &#x3D; Math.round(output * 1000) &#x2F; 1000;</span><br><span class="line">  return rounded.toString();</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F; 父组件</span><br><span class="line">class Calculator extends React.Component &#123;</span><br><span class="line">  constructor(props) &#123;</span><br><span class="line">    super(props);</span><br><span class="line">    this.handleCelsiusChange &#x3D; this.handleCelsiusChange.bind(this);</span><br><span class="line">    this.handleFahrenheitChange &#x3D; this.handleFahrenheitChange.bind(this);</span><br><span class="line">    this.state &#x3D; &#123;temperature: &#39;&#39;, scale: &#39;c&#39;&#125;;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  handleCelsiusChange(temperature) &#123;</span><br><span class="line">    this.setState(&#123;scale: &#39;c&#39;, temperature&#125;);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  handleFahrenheitChange(temperature) &#123;</span><br><span class="line">    this.setState(&#123;scale: &#39;f&#39;, temperature&#125;);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  render() &#123;</span><br><span class="line">    const scale &#x3D; this.state.scale;</span><br><span class="line">    const temperature &#x3D; this.state.temperature;</span><br><span class="line">    const celsius &#x3D; scale &#x3D;&#x3D;&#x3D; &#39;f&#39; ? tryConvert(temperature, toCelsius) : temperature;</span><br><span class="line">    const fahrenheit &#x3D; scale &#x3D;&#x3D;&#x3D; &#39;c&#39; ? tryConvert(temperature, toFahrenheit) : temperature;</span><br><span class="line"></span><br><span class="line">    return (</span><br><span class="line">      &lt;div&gt;</span><br><span class="line">        &lt;TemperatureInput</span><br><span class="line">          scale&#x3D;&quot;c&quot;</span><br><span class="line">          temperature&#x3D;&#123;celsius&#125;</span><br><span class="line">          onTemperatureChange&#x3D;&#123;this.handleCelsiusChange&#125; &#x2F;&gt;</span><br><span class="line"></span><br><span class="line">        &lt;TemperatureInput</span><br><span class="line">          scale&#x3D;&quot;f&quot;</span><br><span class="line">          temperature&#x3D;&#123;fahrenheit&#125;</span><br><span class="line">          onTemperatureChange&#x3D;&#123;this.handleFahrenheitChange&#125; &#x2F;&gt;</span><br><span class="line"></span><br><span class="line">      &lt;&#x2F;div&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>两个输入框的值由父组件完全掌控,解决兄弟节点数据问题,可以提升到父组件来解决.</p>
+<blockquote>
+<p>在 React 应用中，任何可变数据应当只有一个相对应的唯一“数据源”。通常，state 都是首先添加到需要渲染数据的组件中去。然后，如果其他组件也需要这个 state，那么你可以将它提升至这些组件的最近共同父组件中。你应当依靠<a href="https://react.docschina.org/docs/state-and-lifecycle.html#the-data-flows-down" target="_blank" rel="noopener">自上而下的数据流</a>，而不是尝试在不同组件间同步 state。</p>
+</blockquote>
+<h3 id="组合和继承"><a href="#组合和继承" class="headerlink" title="组合和继承"></a>组合和继承</h3><p>React 有十分强大的组合模式。我们推荐使用组合而非继承来实现组件间的代码重用。</p>
+<h4 id="包含关系"><a href="#包含关系" class="headerlink" title="包含关系"></a>包含关系</h4><p>有些组件无法提前知晓它们子组件的具体内容。在 <code>Sidebar</code>（侧边栏）和 <code>Dialog</code>（对话框）等展现通用容器（box）的组件中特别容易遇到这种情况。</p>
+<p>我们建议这些组件使用一个特殊的 <code>children</code> prop 来将他们的子组件传递到渲染结果中：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">function FancyBorder(props) &#123;</span><br><span class="line">  return (</span><br><span class="line">    &lt;div className&#x3D;&#123;&#39;FancyBorder FancyBorder-&#39; + props.color&#125;&gt;</span><br><span class="line">      &#123;props.children&#125;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这使得别的组件可以通过 JSX 嵌套，将任意组件作为子组件传递给它们。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">function WelcomeDialog() &#123;</span><br><span class="line">  return (</span><br><span class="line">    &lt;FancyBorder color&#x3D;&quot;blue&quot;&gt;</span><br><span class="line">      &lt;h1 className&#x3D;&quot;Dialog-title&quot;&gt;</span><br><span class="line">        Welcome</span><br><span class="line">      &lt;&#x2F;h1&gt;</span><br><span class="line">      &lt;p className&#x3D;&quot;Dialog-message&quot;&gt;</span><br><span class="line">        Thank you for visiting our spacecraft!</span><br><span class="line">      &lt;&#x2F;p&gt;</span><br><span class="line">    &lt;&#x2F;FancyBorder&gt;</span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>FancyBorder</code>组件中的内容是通过父组件插进来的,这就是<code>props.children</code>的作用,还是十分的实用,实际上我们也能自定义一个属性通过<code>props</code>传递,当然没问题,但是有<code>children</code>提供了,可以减少代码量.</p>
+<p>但是如果碰到需要补充多个部分内容,显然一个<code>children</code>只能补充一个地方,所以此时我们可以自定义属性传递.</p>
+<h4 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h4><blockquote>
+<p>在 Facebook，我们在成百上千个组件中使用 React。我们并没有发现需要使用继承来构建组件层次的情况。</p>
+<p>Props 和组合为你提供了清晰而安全地定制组件外观和行为的灵活方式。注意：组件可以接受任意 props，包括基本数据类型，React 元素以及函数。</p>
+<p>如果你想要在组件间复用非 UI 的功能，我们建议将其提取为一个单独的 JavaScript 模块，如函数、对象或者类。组件可以直接引入（import）而无需通过 extend 继承它们。</p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+        </section>
+    </div>
+</div>
+
+
+
+
+
+
+</div>
+
+<!-- Footer -->
+<div class="push"></div>
+
+<footer class="footer-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 footer-about">
+                <h2>About</h2>
+                <p>
+                    This theme was developed by <a href="https://github.com/klugjo" target="_blank" rel="noopener">Jonathan Klughertz</a>. The source code is available on Github. Create Websites. Make Magic.
+                </p>
+            </div>
+            
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 recent-posts">
+        <h2>Recent Posts</h2>
+        <ul>
+            
+            <li>
+                <a class="footer-post" href="/2020/03/18/react-demo/">react-demo</a>
+            </li>
+            
+        </ul>
+    </div>
+
+
+
+            
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <ul class="list-inline footer-social-icons">
+                    
+                    <li class="list-inline-item">
+                        <a href="https://github.com/klugjo/hexo-theme-alpha-dust" target="_blank" rel="noopener">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-github"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://twitter.com/?lang=en" target="_blank" rel="noopener">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-twitter"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://www.facebook.com/" target="_blank" rel="noopener">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-facebook"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://www.instagram.com/" target="_blank" rel="noopener">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-instagram"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://dribbble.com/" target="_blank" rel="noopener">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-dribbble"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://plus.google.com/" target="_blank" rel="noopener">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-google-plus"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://www.behance.net/" target="_blank" rel="noopener">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-behance"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://500px.com/" target="_blank" rel="noopener">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-500px"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="mailto:test@example.com">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-envelope-o"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="\#">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-rss"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="footer-copyright">
+                    @Untitled. All right reserved | Design & Hexo <a href="http://www.codeblocq.com/" target="_blank" rel="noopener">Jonathan Klughertz</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Tween Max -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Custom JavaScript -->
+
+<script src="/js/main.js"></script>
+
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
