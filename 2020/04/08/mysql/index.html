@@ -5,7 +5,7 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <link rel="dns-prefetch" href="http://veng.gitee.io/hexo">
+  <link rel="dns-prefetch" href="http://veng0923.github.io">
   <title>mysql | Veng的博客</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -13,19 +13,19 @@
   <meta name="description" content="create 指令创建表1create table [database_name.]table_name (column_name column_type ,...,primary key(column_name,...));  select 指令查询某表指定列数据1select column_name,...  from [database_name.]table_name;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="mysql">
-<meta property="og:url" content="http://veng.gitee.io/hexo/2020/04/08/mysql/index.html">
+<meta property="og:url" content="http://veng0923.github.io/2020/04/08/mysql/index.html">
 <meta property="og:site_name" content="Veng的博客">
 <meta property="og:description" content="create 指令创建表1create table [database_name.]table_name (column_name column_type ,...,primary key(column_name,...));  select 指令查询某表指定列数据1select column_name,...  from [database_name.]table_name;">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://veng.gitee.io/hexo/2020/04/08/mysql/assets/1584093057251.png">
-<meta property="og:image" content="http://veng.gitee.io/hexo/2020/04/08/mysql/assets/1584092085053.png">
-<meta property="og:image" content="http://veng.gitee.io/hexo/2020/04/08/mysql/assets/1584091951728.png">
+<meta property="og:image" content="http://veng0923.github.io/04/08/mysql/assets/1584093057251.png">
+<meta property="og:image" content="http://veng0923.github.io/04/08/mysql/assets/1584092085053.png">
+<meta property="og:image" content="http://veng0923.github.io/04/08/mysql/assets/1584091951728.png">
 <meta property="article:published_time" content="2020-04-08T10:22:04.000Z">
 <meta property="article:modified_time" content="2020-12-08T05:07:34.000Z">
 <meta property="article:author" content="Veng">
 <meta property="article:tag" content="mysql">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://veng.gitee.io/hexo/2020/04/08/mysql/assets/1584093057251.png">
+<meta name="twitter:image" content="http://veng0923.github.io/04/08/mysql/assets/1584093057251.png">
   
     <link rel="alternative" href="/atom.xml" title="Veng的博客" type="application/atom+xml">
   
@@ -253,7 +253,7 @@
 <h3 id="alter-指令"><a href="#alter-指令" class="headerlink" title="alter 指令"></a>alter 指令</h3><h4 id="修改列的类型"><a href="#修改列的类型" class="headerlink" title="修改列的类型"></a>修改列的类型</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> [database.]table_name <span class="keyword">modify</span> column_name column_type;</span><br></pre></td></tr></table></figure>
 
 <p>示例：修改字符串长度</p>
-<p><img src="http://veng.gitee.io/hexo/2020/04/08/mysql/assets/1584093057251.png" alt="1584093057251"></p>
+<p><img src="http://veng0923.github.io/04/08/mysql/assets/1584093057251.png" alt="1584093057251"></p>
 <h4 id="修改列名以及类型"><a href="#修改列名以及类型" class="headerlink" title="修改列名以及类型"></a>修改列名以及类型</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> [database.]table_name <span class="keyword">change</span> column_name new_column_name column_type;</span><br></pre></td></tr></table></figure>
 
 <h4 id="修改表名"><a href="#修改表名" class="headerlink" title="修改表名"></a>修改表名</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> [database.]table_name <span class="keyword">rename</span> <span class="keyword">to</span> new_table_name;</span><br></pre></td></tr></table></figure>
@@ -269,7 +269,7 @@
 <h3 id="desc-指令"><a href="#desc-指令" class="headerlink" title="desc 指令"></a>desc 指令</h3><h4 id="查看表的信息概况"><a href="#查看表的信息概况" class="headerlink" title="查看表的信息概况"></a>查看表的信息概况</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">desc [database.]table_name;</span><br></pre></td></tr></table></figure>
 
 <p>示例：</p>
-<p><img src="http://veng.gitee.io/hexo/2020/04/08/mysql/assets/1584092085053.png" alt="1584092085053"></p>
+<p><img src="http://veng0923.github.io/04/08/mysql/assets/1584092085053.png" alt="1584092085053"></p>
 <h3 id="truncate-指令"><a href="#truncate-指令" class="headerlink" title="truncate 指令"></a>truncate 指令</h3><h4 id="清空某表"><a href="#清空某表" class="headerlink" title="清空某表"></a>清空某表</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">truncate</span> <span class="keyword">table</span> [database.]table_name;</span><br></pre></td></tr></table></figure>
 
 <h3 id="show-指令"><a href="#show-指令" class="headerlink" title="show 指令"></a>show 指令</h3><h4 id="查看所有数据库"><a href="#查看所有数据库" class="headerlink" title="查看所有数据库."></a>查看所有数据库.</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">show</span> <span class="keyword">databases</span>;</span><br></pre></td></tr></table></figure>
@@ -277,7 +277,7 @@
 <h4 id="查看表的创建信息"><a href="#查看表的创建信息" class="headerlink" title="查看表的创建信息"></a>查看表的创建信息</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">show</span> <span class="keyword">create</span> <span class="keyword">table</span> [database.]table_name;</span><br></pre></td></tr></table></figure>
 
 <p>示例：</p>
-<p><img src="http://veng.gitee.io/hexo/2020/04/08/mysql/assets/1584091951728.png" alt="1584091951728"></p>
+<p><img src="http://veng0923.github.io/04/08/mysql/assets/1584091951728.png" alt="1584091951728"></p>
 <p>会显示表的创建<code>sql</code>语句。</p>
 <h4 id="显示索引信息"><a href="#显示索引信息" class="headerlink" title="显示索引信息"></a>显示索引信息</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">show</span> <span class="keyword">index</span> <span class="keyword">from</span> [database.]table_name;</span><br></pre></td></tr></table></figure>
 
@@ -322,7 +322,7 @@
         </li>
         <li>
           <strong>本文链接：</strong>
-          <a href="http://veng.gitee.io/hexo/2020/04/08/mysql/" title="mysql" target="_blank">http://veng.gitee.io/hexo/2020/04/08/mysql/</a>
+          <a href="http://veng0923.github.io/2020/04/08/mysql/" title="mysql" target="_blank">http://veng0923.github.io/2020/04/08/mysql/</a>
         </li>
         
         <li>
@@ -411,7 +411,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://veng.gitee.io/hexo/2020/04/08/mysql/" alt="微信分享二维码"> -->
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://veng0923.github.io/2020/04/08/mysql/" alt="微信分享二维码"> -->
     </div>
 </div>
 
@@ -517,7 +517,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2020-2022 <a href="http://veng.gitee.io/hexo/" target="_blank">Veng</a>
+    		&copy; 2020-2022 <a href="http://veng0923.github.io/" target="_blank">Veng</a>
     	</div>
       	<div class="footer-right">
 			<!-- 
@@ -647,10 +647,6 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">linux</a>
               </li>
              
@@ -660,6 +656,10 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">iptables</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -675,19 +675,19 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">镜像</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">加速</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">eggjs</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">axios</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">镜像</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">加速</a>
               </li>
              
               <li class="article-tag-list-item">

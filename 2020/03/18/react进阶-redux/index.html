@@ -5,7 +5,7 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <link rel="dns-prefetch" href="http://veng.gitee.io/hexo">
+  <link rel="dns-prefetch" href="http://veng0923.github.io">
   <title>react进阶-redux | Veng的博客</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -13,13 +13,13 @@
   <meta name="description" content="react进阶-redux开始Redux，一种新型的前端“架构模式”。经常和 React.js 一并提出，你要用 React.js 基本都要伴随着 Redux 和 React.js 结合的库 React-redux。  要注意的是，Redux和 React-redux 并不是同一个东西。Redux是一种架构模式（Flux 架构的一种变种），它不关注你到底用什么库，你可以把它应用到 React和 V">
 <meta property="og:type" content="article">
 <meta property="og:title" content="react进阶-redux">
-<meta property="og:url" content="http://veng.gitee.io/hexo/2020/03/18/react%E8%BF%9B%E9%98%B6-redux/index.html">
+<meta property="og:url" content="http://veng0923.github.io/2020/03/18/react%E8%BF%9B%E9%98%B6-redux/index.html">
 <meta property="og:site_name" content="Veng的博客">
 <meta property="og:description" content="react进阶-redux开始Redux，一种新型的前端“架构模式”。经常和 React.js 一并提出，你要用 React.js 基本都要伴随着 Redux 和 React.js 结合的库 React-redux。  要注意的是，Redux和 React-redux 并不是同一个东西。Redux是一种架构模式（Flux 架构的一种变种），它不关注你到底用什么库，你可以把它应用到 React和 V">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://veng.gitee.io/hexo/2020/03/18/react%E8%BF%9B%E9%98%B6-redux/assets/1584540788426.png">
-<meta property="og:image" content="http://veng.gitee.io/hexo/2020/03/18/react%E8%BF%9B%E9%98%B6-redux/assets/1584542916546.png">
-<meta property="og:image" content="http://veng.gitee.io/hexo/2020/03/18/react%E8%BF%9B%E9%98%B6-redux/assets/sky10.3.gif">
+<meta property="og:image" content="http://veng0923.github.io/03/18/react%E8%BF%9B%E9%98%B6-redux/assets/1584540788426.png">
+<meta property="og:image" content="http://veng0923.github.io/03/18/react%E8%BF%9B%E9%98%B6-redux/assets/1584542916546.png">
+<meta property="og:image" content="http://veng0923.github.io/03/18/react%E8%BF%9B%E9%98%B6-redux/assets/sky10.3.gif">
 <meta property="article:published_time" content="2020-03-18T15:42:40.000Z">
 <meta property="article:modified_time" content="2020-12-08T05:07:34.000Z">
 <meta property="article:author" content="Veng">
@@ -27,7 +27,7 @@
 <meta property="article:tag" content="redux">
 <meta property="article:tag" content="react-redux">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://veng.gitee.io/hexo/2020/03/18/react%E8%BF%9B%E9%98%B6-redux/assets/1584540788426.png">
+<meta name="twitter:image" content="http://veng0923.github.io/03/18/react%E8%BF%9B%E9%98%B6-redux/assets/1584540788426.png">
   
     <link rel="alternative" href="/atom.xml" title="Veng的博客" type="application/atom+xml">
   
@@ -279,7 +279,7 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> store <span class="keyword">from</span> <span class="string">'./store'</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; insertTodo &#125; <span class="keyword">from</span> <span class="string">'./action'</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; Component &#125; <span class="keyword">from</span> <span class="string">'react'</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Test</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>(props) &#123;</span><br><span class="line">    <span class="keyword">super</span>(props);</span><br><span class="line">    <span class="built_in">console</span>.table(store.getState());</span><br><span class="line">    store.dispatch(insertTodo(<span class="string">'run'</span>));</span><br><span class="line">    store.dispatch(insertTodo(<span class="string">'write a blog'</span>));</span><br><span class="line">    <span class="built_in">console</span>.table(store.getState());</span><br><span class="line">  &#125;</span><br><span class="line">  render() &#123; </span><br><span class="line">    <span class="keyword">return</span> (<span class="literal">null</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> Test;</span><br></pre></td></tr></table></figure>
 
 <p>这里我们增加了两个事件,验证一下:</p>
-<p><img src="http://veng.gitee.io/hexo/2020/03/18/react%E8%BF%9B%E9%98%B6-redux/assets/1584540788426.png" alt="1584540788426"></p>
+<p><img src="http://veng0923.github.io/03/18/react%E8%BF%9B%E9%98%B6-redux/assets/1584540788426.png" alt="1584540788426"></p>
 <p>这就是<code>redux</code>的工作原理,还有一个问题就是<code>store</code>就像是全局变量,可能两个组件的数据变量可能会重复,会出现不方便维护,解决方案是我们为每个组件设置成单独的数据域,就好像:</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    app:&#123;...&#125;,</span><br><span class="line">    todoList: &#123;...&#125;,</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -296,7 +296,7 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">constructor</span>(props) &#123;</span><br><span class="line">  <span class="keyword">super</span>(props);</span><br><span class="line">  <span class="built_in">console</span>.table(store.getState());</span><br><span class="line">  store.dispatch(insertTodo(<span class="string">'run'</span>));</span><br><span class="line">  store.dispatch(insertTodo(<span class="string">'write a blog'</span>));</span><br><span class="line">  <span class="built_in">console</span>.table(store.getState());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>我们同样的对其进行打印,看看数据是否有变化.</p>
-<p><img src="http://veng.gitee.io/hexo/2020/03/18/react%E8%BF%9B%E9%98%B6-redux/assets/1584542916546.png" alt="1584542916546"></p>
+<p><img src="http://veng0923.github.io/03/18/react%E8%BF%9B%E9%98%B6-redux/assets/1584542916546.png" alt="1584542916546"></p>
 <p>我们可以看到,<code>store</code>保存的数据结构已经发生了变化,已经开始分区域保存数据,实际保存数据的其实是<code>reducer</code>,只不过<code>store</code>包含了所有的<code>reducer</code>.</p>
 <h3 id="结合-react-redux"><a href="#结合-react-redux" class="headerlink" title="结合 react-redux"></a>结合 <code>react-redux</code></h3><p><code>React-Redux</code>是<code>Redux</code>的官方<code>React</code>绑定库。它能够使你的<code>React</code>组件从<code>Redux store</code>中读取数据，并且向<code>store</code>分发<code>actions</code>以更新数据.</p>
 <p><code>react-redux</code>提供了两个东西,<code>&lt;Provider/&gt;</code>组件和<code>connect</code>函数.</p>
@@ -338,7 +338,7 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; Provider &#125; <span class="keyword">from</span> <span class="string">'react-redux'</span>;</span><br><span class="line"><span class="keyword">import</span> store <span class="keyword">from</span> <span class="string">'./store/store'</span>;</span><br><span class="line">ReactDOM.render(</span><br><span class="line">  &lt;Provider store=&#123;store&#125;&gt;</span><br><span class="line">    &lt;App /&gt;</span><br><span class="line">  &lt;<span class="regexp">/Provider&gt;, document.getElementById('root'));</span></span><br></pre></td></tr></table></figure>
 
 <p>最后的效果:</p>
-<p><img src="http://veng.gitee.io/hexo/2020/03/18/react%E8%BF%9B%E9%98%B6-redux/assets/sky10.3.gif" alt="sky10.3"></p>
+<p><img src="http://veng0923.github.io/03/18/react%E8%BF%9B%E9%98%B6-redux/assets/sky10.3.gif" alt="sky10.3"></p>
 
     
 
@@ -380,7 +380,7 @@
         </li>
         <li>
           <strong>本文链接：</strong>
-          <a href="http://veng.gitee.io/hexo/2020/03/18/react进阶-redux/" title="react进阶-redux" target="_blank">http://veng.gitee.io/hexo/2020/03/18/react进阶-redux/</a>
+          <a href="http://veng0923.github.io/2020/03/18/react进阶-redux/" title="react进阶-redux" target="_blank">http://veng0923.github.io/2020/03/18/react进阶-redux/</a>
         </li>
         
         <li>
@@ -477,7 +477,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://veng.gitee.io/hexo/2020/03/18/react%E8%BF%9B%E9%98%B6-redux/" alt="微信分享二维码"> -->
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://veng0923.github.io/2020/03/18/react%E8%BF%9B%E9%98%B6-redux/" alt="微信分享二维码"> -->
     </div>
 </div>
 
@@ -583,7 +583,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2020-2022 <a href="http://veng.gitee.io/hexo/" target="_blank">Veng</a>
+    		&copy; 2020-2022 <a href="http://veng0923.github.io/" target="_blank">Veng</a>
     	</div>
       	<div class="footer-right">
 			<!-- 
@@ -713,10 +713,6 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">linux</a>
               </li>
              
@@ -726,6 +722,10 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">iptables</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -741,19 +741,19 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">镜像</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">加速</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">eggjs</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">axios</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">镜像</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">加速</a>
               </li>
              
               <li class="article-tag-list-item">
