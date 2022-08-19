@@ -6,21 +6,27 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://veng.gitee.io/hexo">
-  <title>tags | Veng的博客</title>
+  <title>iptables | Veng的博客</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="个人博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="tags">
-<meta property="og:url" content="http://veng.gitee.io/hexo/tags/index.html">
+  <meta name="description" content="1. iptables 命令基本语法 “iptables [-t table] command [链名] [条件匹配] [-j 目标动作]   以下是对 iptables 命令的拆分讲解：">
+<meta property="og:type" content="article">
+<meta property="og:title" content="iptables">
+<meta property="og:url" content="http://veng.gitee.io/hexo/2022/08/19/iptables/index.html">
 <meta property="og:site_name" content="Veng的博客">
-<meta property="og:description" content="个人博客">
+<meta property="og:description" content="1. iptables 命令基本语法 “iptables [-t table] command [链名] [条件匹配] [-j 目标动作]   以下是对 iptables 命令的拆分讲解：">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-03-18T07:16:40.000Z">
-<meta property="article:modified_time" content="2020-12-08T05:07:34.000Z">
+<meta property="og:image" content="https://veng-photo.oss-cn-beijing.aliyuncs.com/jd6utdfije.png">
+<meta property="og:image" content="https://ask.qcloudimg.com/raw/yehe-b344c32fabf35/p31lofs9ek.png?imageView2/2/w/1620">
+<meta property="article:published_time" content="2022-08-19T03:53:27.000Z">
+<meta property="article:modified_time" content="2022-08-19T06:04:16.584Z">
 <meta property="article:author" content="Veng">
+<meta property="article:tag" content="linux">
+<meta property="article:tag" content="嵌入式">
+<meta property="article:tag" content="iptables">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://veng-photo.oss-cn-beijing.aliyuncs.com/jd6utdfije.png">
   
     <link rel="alternative" href="/hexo/atom.xml" title="Veng的博客" type="application/atom+xml">
   
@@ -179,14 +185,14 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="page-" class="article article-type-page " itemscope itemprop="blogPost">
+            <article id="post-iptables" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
   
   
     <h1 class="article-title" itemprop="name">
-      tags
+      iptables
     </h1>
   
 
@@ -198,8 +204,8 @@
               <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
         </span>
 
-<a href="/hexo/tags/index.html" class="archive-article-date">
-        <time datetime="2020-03-18T07:16:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-18</time>
+<a href="/hexo/2022/08/19/iptables/" class="archive-article-date">
+        <time datetime="2022-08-19T03:53:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-08-19</time>
 </a>
 
   
@@ -212,7 +218,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">0字</span>
+      <span class="post-count">1.9k字</span>
     </span>
   </span>
 
@@ -221,7 +227,7 @@
     <span class="post-meta-item-icon">
       <i class="icon-book icon"></i>
       <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">1分</span>
+      <span class="post-count">7分</span>
     </span>
   </span>
 </div>
@@ -232,7 +238,162 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    
+    <h2 id="1-iptables-命令基本语法"><a href="#1-iptables-命令基本语法" class="headerlink" title="1. iptables 命令基本语法"></a>1. iptables 命令基本语法</h2><blockquote>
+<p>“iptables [-t table] command [链名] [条件匹配] [-j 目标动作]</p>
+</blockquote>
+<p><img src="https://veng-photo.oss-cn-beijing.aliyuncs.com/jd6utdfije.png" alt="img"></p>
+<p><strong>以下是对 iptables 命令的拆分讲解：</strong></p>
+<a id="more"></a>
+
+<h3 id="1-2-t-table"><a href="#1-2-t-table" class="headerlink" title="1.2 -t table"></a>1.2 -t table</h3><p>用来指明使用的表，有三种选项: <code>filter</code>，<code>nat</code>，<code>mangle</code>。若未指定，则<strong>默认使用filter表</strong>。</p>
+<h3 id="1-3-command参数"><a href="#1-3-command参数" class="headerlink" title="1.3 command参数"></a>1.3 command参数</h3><p>指定iptables 对我们提交的规则要做什么样的操作，以下是command常用参数：</p>
+<ul>
+<li><strong><code>-A</code></strong></li>
+</ul>
+<p>Append，追加一条规则（放到最后）</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">举例：iptables -A INPUT -j DROP #拒绝所有人访问服务器（作为最后一条规则）</span><br><span class="line"><span class="comment">// 若未 -t 指定表，默认使用filter表</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong><code>-I</code></strong></li>
+</ul>
+<p>Insert，在指定的位置插入规则</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"> 举例：iptables -I INPUT 2 -s 10.10.10.1 -j ACCEPT #允许10.10.10.1主机访问本机</span><br><span class="line"><span class="comment">// 在 filter 表的 INPUT 链插入成第2条规则</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong><code>-L</code></strong></li>
+</ul>
+<p>List，查看规则列表</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> 具体参数：n：只显示 IP 地址和端口号码，不显示域名和服务名称</span><br><span class="line">v：显示详细信息，包括每条规则的匹配包数量和匹配字节数</span><br><span class="line">x：在 v 的基础上，禁止自动单位换算（K、M）</span><br><span class="line">--line-number：可以查看到规则号</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">举例：iptables -nL --line-number</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://ask.qcloudimg.com/raw/yehe-b344c32fabf35/p31lofs9ek.png?imageView2/2/w/1620" alt="img"></p>
+<ul>
+<li><strong><code>-D</code></strong></li>
+</ul>
+<p>Delete，从规则列表中删除规则</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"> 举例：iptables -D INPUT <span class="number">2</span></span><br><span class="line"><span class="comment">// 删除 filter 表 INPUT 链中的第 2 条规则</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong><code>-P</code></strong></li>
+</ul>
+<p>Policy，设置某个链的默认规则</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">举例：iptables -P INPUT DROP</span><br><span class="line"><span class="comment">// 设置 filter 表 INPUT 链的默认规则是 DROP</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>“当数据包没有被任何规则匹配时，则按默认规则处理。</p>
+</blockquote>
+<ul>
+<li><strong><code>-F</code></strong></li>
+</ul>
+<p>Flush，清空规则</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  举例：</span><br><span class="line">iptables -F INPUT #清空filter 表中INPUT链上的规则</span><br><span class="line">iptables -F #清空filter 表中所有链上的规则</span><br><span class="line">iptables -t nat -F PREROUTING ##清空NAT表中PREROUTING链上的规则</span><br><span class="line">iptables -t nat -F #清空NAT表中所有链上的规则</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>“注意：-F 是清空链中规则，但并不影响 -P 设置的默认规则。<strong>因此在生产环境中，若指定默认规则为DROP，一旦执行<code>iptables -F</code>，很容易导致自己也无法连接</strong><a href="https://cloud.tencent.com/product/cvm?from=10680" target="_blank" rel="noopener"><strong>服务器</strong></a><strong>（-F 会把配置的明细ACCEPT规则删除，只留下默认规则拒接所有）。</strong></p>
+</blockquote>
+<ul>
+<li><strong><code>-Z</code></strong></li>
+</ul>
+<p>zero，将指定链的所有计数器归零。（如未指定，则认为是所有链）</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">举例：</span><br><span class="line">iptables -Z INPUT</span><br><span class="line"><span class="comment">//清除filter表INPUT链上的计数器</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="1-4-条件匹配参数"><a href="#1-4-条件匹配参数" class="headerlink" title="1.4 条件匹配参数"></a>1.4 条件匹配参数</h3><h4 id="1-4-1-按网络接口匹配"><a href="#1-4-1-按网络接口匹配" class="headerlink" title="1.4.1 按网络接口匹配"></a>1.4.1 按网络接口匹配</h4><ul>
+<li><strong><code>-i</code></strong></li>
+</ul>
+<p>匹配数据进入的网络接口，此参数主要应用nat表，例如目标地址转换。</p>
+<ul>
+<li><strong><code>-o</code></strong></li>
+</ul>
+<p>匹配数据流出的网络接口</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">举例：</span><br><span class="line">-i eth0</span><br><span class="line"><span class="comment">// 匹配从网络接口eth0进来的数据包</span></span><br><span class="line"></span><br><span class="line">-o eth1</span><br><span class="line"><span class="comment">// 匹配从eth1流出的数据包</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="1-4-2-按源及目的地址匹配"><a href="#1-4-2-按源及目的地址匹配" class="headerlink" title="1.4.2 按源及目的地址匹配"></a>1.4.2 按源及目的地址匹配</h4><ul>
+<li><strong><code>-s</code></strong></li>
+</ul>
+<p>匹配源地址，可以是IP、网段、<a href="https://cloud.tencent.com/act/pro/domain-sales?from=10680" target="_blank" rel="noopener">域名</a>，也可空（代表任何地址）</p>
+<ul>
+<li><strong><code>-d</code></strong></li>
+</ul>
+<p>匹配目标地址</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">举例：</span><br><span class="line">-s 参数举例：</span><br><span class="line">iptables -A INPUT -s <span class="number">10.10</span><span class="number">.10</span><span class="number">.10</span> -j DROP</span><br><span class="line"><span class="comment">// 拒绝10.10.10.10主机访问本机</span></span><br><span class="line"></span><br><span class="line">-d 参数举例：</span><br><span class="line">iptables -A OUTPUT -d www.baidu.com -j DROP</span><br><span class="line"><span class="comment">// 禁止本机访问百度</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="1-4-3-按协议类型匹配"><a href="#1-4-3-按协议类型匹配" class="headerlink" title="1.4.3 按协议类型匹配"></a>1.4.3 按协议类型匹配</h4><ul>
+<li><strong><code>-p</code></strong></li>
+</ul>
+<p>匹配协议类型，可以是TCP、UDP、ICMP等</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">  举例：</span><br><span class="line">iptables -A INPUT -s <span class="number">10.10</span><span class="number">.10</span><span class="number">.10</span> -p icmp -j DROP</span><br><span class="line"><span class="comment">// 禁止10.10.10.10主机ping通本机</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="1-4-4-按源及目的端口匹配"><a href="#1-4-4-按源及目的端口匹配" class="headerlink" title="1.4.4 按源及目的端口匹配"></a>1.4.4 按源及目的端口匹配</h4><ul>
+<li><strong><code>--sport</code></strong></li>
+</ul>
+<p>匹配源端口;可以是单个端口，也可以是端口范围</p>
+<ul>
+<li><strong><code>--dport</code></strong></li>
+</ul>
+<p>匹配目的端口</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">举例：</span><br><span class="line">-- sport <span class="number">23</span></span><br><span class="line"><span class="comment">//匹配源端口是23的数据包</span></span><br><span class="line"></span><br><span class="line"> -- sport <span class="number">2000</span>:<span class="number">3000</span></span><br><span class="line"><span class="comment">//匹配源端口是 2000-3000 的数据包</span></span><br><span class="line"></span><br><span class="line">-- sport :<span class="number">2000</span></span><br><span class="line"><span class="comment">//匹配2000以下的数据包（包含2000）</span></span><br><span class="line"></span><br><span class="line">- --sport <span class="number">1000</span>:</span><br><span class="line"><span class="comment">//匹配1000以上的数据包（包含1000）</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>“注意：–sport 和 –dport 必须配合 -p 参数使用，例如：</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">iptables -A INPUT -p tcp –dport <span class="number">80</span> -j ACCEPT</span><br><span class="line"><span class="comment">//允许外部数据访问我的本地服务器80端口</span></span><br><span class="line"></span><br><span class="line">详细解释：</span><br><span class="line"><span class="number">1</span>、这是一条从外部进入内部本地服务器的数据</span><br><span class="line"><span class="number">2</span>、数据包的目的（dport）地址是<span class="number">22</span>，就是要访问我本地的<span class="number">22</span>端口</span><br><span class="line"><span class="number">3</span>、允许以上的数据行为通过</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-5-目的动作"><a href="#1-5-目的动作" class="headerlink" title="1.5 目的动作"></a>1.5 目的动作</h3><ul>
+<li><strong><code>-j ACCEPT</code></strong></li>
+</ul>
+<p>允许数据包通过本链而不拦截它</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">举例：</span><br><span class="line">iptables -A INPUT -j ACCEPT</span><br><span class="line"><span class="comment">// 允许所有访问本机的数据包通过</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong><code>-j DROP</code></strong></li>
+</ul>
+<p>丢弃数据包；阻止数据包通过本链</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">举例：</span><br><span class="line">iptables -A FORWARD -s <span class="number">10.10</span><span class="number">.10</span><span class="number">.10</span> -j DROP</span><br><span class="line"><span class="comment">// 阻止来自10.10.10.10 的数据包通过本机</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong><code>-j SNAT</code></strong></li>
+</ul>
+<p>源地址转换，支持转换为单IP，也支持转换到IP地址池</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">举例：</span><br><span class="line">转换到单IP举例：</span><br><span class="line">iptables -t nat -A POSTROUTING -s <span class="number">192.168</span><span class="number">.1</span><span class="number">.0</span>/<span class="number">24</span> -j SNAT --to <span class="number">18.18</span><span class="number">.18</span><span class="number">.18</span></span><br><span class="line"><span class="comment">// 将内网 192.168.1.0/24 转换为公网18.18.18.18地址；SNAT，用于访问互联网</span></span><br><span class="line"></span><br><span class="line">转换到一组地址池：</span><br><span class="line">iptables -t nat -A POSTROUTING -s <span class="number">192.168</span><span class="number">.1</span><span class="number">.0</span>/<span class="number">24</span> -j SNAT --to <span class="number">18.18</span><span class="number">.18</span><span class="number">.18</span><span class="number">-18.18</span><span class="number">.18</span><span class="number">.28</span></span><br><span class="line"><span class="comment">//同上，只不过是转换到一组IP地址池</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong><code>-j DNAT</code></strong></li>
+</ul>
+<p>目的地址转换，支持转换为单IP，也支持转换到IP地址池</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">举例：</span><br><span class="line">转换到单IP举例：</span><br><span class="line">iptables -t nat -A PREROUTING -i eth0 -p tcp --dport <span class="number">80</span> -j DNAT --to <span class="number">192.168</span><span class="number">.1</span><span class="number">.1</span></span><br><span class="line"><span class="comment">//把从eth0口进来访问TCP/80端口的数据包目的地址改成192.168.1.1</span></span><br><span class="line"></span><br><span class="line">转换到一组地址池：</span><br><span class="line">iptables -t nat -A PREROUTING -i eth0 -p tcp --dport <span class="number">80</span> -j DNAT --to <span class="number">192.168</span><span class="number">.1</span><span class="number">.1</span><span class="number">-192.168</span><span class="number">.1</span><span class="number">.10</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong><code>-j MASQUERADE</code></strong></li>
+</ul>
+<p>动态SNAT转换（适用于动态 IP 场景 ）</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">举例：</span><br><span class="line">iptables -t nat -A POSTROUTING -s <span class="number">192.168</span><span class="number">.1</span><span class="number">.0</span>/<span class="number">24</span> -o eth0 -j MASQUERADE</span><br><span class="line"><span class="comment">// 将源地址是 192.168.1.0/24 的数据包进行地址伪装，转换成 eth0 上的 IP 地址</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="2-iptables-常用附加模块"><a href="#2-iptables-常用附加模块" class="headerlink" title="2.iptables 常用附加模块"></a>2.iptables 常用附加模块</h2><h3 id="2-1-按包状态匹配-（state）"><a href="#2-1-按包状态匹配-（state）" class="headerlink" title="2.1 按包状态匹配 （state）"></a>2.1 按包状态匹配 （state）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">-m state --state 状态</span><br><span class="line">举例：</span><br><span class="line">iptables -A INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT</span><br><span class="line">&#x2F;&#x2F; 将目前已运行的服务端口全部放行！无风险，良心推荐使用</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-2按来源-MAC-匹配（mac）"><a href="#2-2按来源-MAC-匹配（mac）" class="headerlink" title="2.2按来源 MAC 匹配（mac）"></a>2.2按来源 MAC 匹配（mac）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">-m mac --mac-source MAC</span><br><span class="line">举例：</span><br><span class="line">iptables -A INPUT -m mac --mac-source xx:xx:xx:xx:xx:xx -j DROP</span><br><span class="line">&#x2F;&#x2F; 拒绝来自某 MAC 地址的数据包进入本机</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-3-按包速率匹配-（limit）"><a href="#2-3-按包速率匹配-（limit）" class="headerlink" title="2.3 按包速率匹配 （limit）"></a>2.3 按包速率匹配 （limit）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">-m limit --limit 匹配速率</span><br><span class="line">  举例：</span><br><span class="line">iptables -A FORWARD -d 192.168.1.1 -m limit --limit 50&#x2F;s -j ACCEPT</span><br><span class="line">iptables -A FORWARD -d 192.168.1.1 -j DROP</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>“limit 英语上看是限制的意思，但实际上只是<strong>按一定速率去匹配</strong>而已，50/s 表示 1 秒中转发 50 个数据包，要想限制的话后面要再跟一条DROP规则</p>
+</blockquote>
+<h3 id="2-4-多端口匹配-（multiport）"><a href="#2-4-多端口匹配-（multiport）" class="headerlink" title="2.4 多端口匹配 （multiport）"></a>2.4 多端口匹配 （multiport）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">-m multiport &lt;--sports|--dports|--ports&gt; 端口 1[,端口 2,..,端口 n]</span><br><span class="line">举例：</span><br><span class="line">iptables -A INPUT -p tcp -m multiport --dports 22,53,80,443 -j ACCEPT</span><br><span class="line">&#x2F;&#x2F; 允许访问本机TCP&#x2F;22,53,80,443端口</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>“注意：该参数必须与 -p 参数一起使用</p>
+</blockquote>
+<h2 id="3-iptables-规则备份和恢复"><a href="#3-iptables-规则备份和恢复" class="headerlink" title="3. iptables 规则备份和恢复"></a>3. iptables 规则备份和恢复</h2><blockquote>
+<p>“我们执行 iptables 命令时，规则只是保存在内存中，并没有保存到某一个文件中。因此系统重启之后，之前设定的规则就没有了，所以规则设定完毕，检查无误后要及时保存规则，使用命令：</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@LB-01 ~]# service iptables save</span><br><span class="line">iptables: Saving firewall rules to /etc/sysconfig/iptables:[  OK  ]</span><br></pre></td></tr></table></figure>
+
+<p>会看到提示，防火墙规则保存在<code>/etc/sysconfig/iptables</code>文件内，这个文件就是iptables的配置文件。所以如果要备份防火墙规则，复制该配置文件即可。例如：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp /etc/sysconfig/iptables /opt/myipt.rule</span><br></pre></td></tr></table></figure>
+
+<p>如果需要恢复这些规则，使用以下命令：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">iptables-restore &lt; <span class="regexp">/opt/myi</span>pt.rule</span><br><span class="line">service iptables save</span><br></pre></td></tr></table></figure>
+
     
 
     
@@ -273,7 +434,7 @@
         </li>
         <li>
           <strong>本文链接：</strong>
-          <a href="http://veng.gitee.io/hexo/hexo/tags/index.html" title="tags" target="_blank">http://veng.gitee.io/hexo/hexo/tags/index.html</a>
+          <a href="http://veng.gitee.io/hexo/hexo/2022/08/19/iptables/" title="iptables" target="_blank">http://veng.gitee.io/hexo/hexo/2022/08/19/iptables/</a>
         </li>
         
         <li>
@@ -290,7 +451,37 @@
   <div class="article-info article-info-index">
     
     
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">linux</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">嵌入式</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">iptables</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
     
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/hexo/categories/网络//" class="article-tag-list-link color3">网络</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
     
 
@@ -340,7 +531,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://veng.gitee.io/hexo/tags/" alt="微信分享二维码"> -->
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://veng.gitee.io/hexo/2022/08/19/iptables/" alt="微信分享二维码"> -->
     </div>
 </div>
 
@@ -352,6 +543,16 @@
   </div>
 </article>
 
+
+<nav id="article-nav">
+  
+  
+    <a href="/hexo/2020/09/02/pjlib-%E5%86%85%E5%AD%98%E6%B1%A0-%E8%AE%A1%E6%97%B6%E5%99%A8%E8%A7%A3%E6%9E%90/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">pjlib-内存池-计时器解析</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
 
 <aside class="wrap-side-operation">
@@ -374,7 +575,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    目录，不存在的…
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-iptables-命令基本语法"><span class="toc-number">1.</span> <span class="toc-text">1. iptables 命令基本语法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-t-table"><span class="toc-number">1.1.</span> <span class="toc-text">1.2 -t table</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-command参数"><span class="toc-number">1.2.</span> <span class="toc-text">1.3 command参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-条件匹配参数"><span class="toc-number">1.3.</span> <span class="toc-text">1.4 条件匹配参数</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-4-1-按网络接口匹配"><span class="toc-number">1.3.1.</span> <span class="toc-text">1.4.1 按网络接口匹配</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-4-2-按源及目的地址匹配"><span class="toc-number">1.3.2.</span> <span class="toc-text">1.4.2 按源及目的地址匹配</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-4-3-按协议类型匹配"><span class="toc-number">1.3.3.</span> <span class="toc-text">1.4.3 按协议类型匹配</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-4-4-按源及目的端口匹配"><span class="toc-number">1.3.4.</span> <span class="toc-text">1.4.4 按源及目的端口匹配</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-5-目的动作"><span class="toc-number">1.4.</span> <span class="toc-text">1.5 目的动作</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-iptables-常用附加模块"><span class="toc-number">2.</span> <span class="toc-text">2.iptables 常用附加模块</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-按包状态匹配-（state）"><span class="toc-number">2.1.</span> <span class="toc-text">2.1 按包状态匹配 （state）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2按来源-MAC-匹配（mac）"><span class="toc-number">2.2.</span> <span class="toc-text">2.2按来源 MAC 匹配（mac）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-按包速率匹配-（limit）"><span class="toc-number">2.3.</span> <span class="toc-text">2.3 按包速率匹配 （limit）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-多端口匹配-（multiport）"><span class="toc-number">2.4.</span> <span class="toc-text">2.4 多端口匹配 （multiport）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-iptables-规则备份和恢复"><span class="toc-number">3.</span> <span class="toc-text">3. iptables 规则备份和恢复</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -398,9 +599,9 @@
     <script src="/hexo/lib/giteement.browser.js"></script>
   
   <script>
-  <!-- id: "tags" -->
+  <!-- id: "iptables" -->
   var giteement = new Giteement({
-    id: '20200318151640',
+    id: '20220819115327',
     owner: 'Veng',
     repo: 'hexo-comment',
     backcall_uri: 'http://veng.gitee.io/hexo',
@@ -458,7 +659,7 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
